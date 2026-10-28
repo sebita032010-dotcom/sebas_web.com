@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arena del Saber · Gamificación Bachillerato</title>
+<link rel="stylesheet" href="css/styles.css">
+</head><body><div class="wrap">
+<section id="register">
+ <div class="top"><div><h1>📝 Registro <span>Arena del Saber</span></h1><p class="sub">Pantalla 1 de 2 · registra a los participantes</p></div>
+ <button class="tg" id="theme">🌓 Tema</button></div>
+ <h2>1 · Modalidad</h2><div class="pills" id="teamsel"></div>
+ <h2>2 · Nombres</h2><div class="names" id="names"></div>
+ <h2>3 · Carrera</h2><div class="grid" id="careers"></div>
+ <h2>4 · Curso</h2><div class="pills" id="courses"></div>
+ <button class="go" id="toLobby" disabled>Continuar ▶</button>
+ <button class="go" id="toHall" style="background:var(--c)">🏆 Salón de la fama</button>
+</section>
+<section id="lobby" class="hide">
+ <h1>🚀 Sala de <span>preparación</span></h1><p class="sub">Pantalla 2 de 2 · revisa y configura la partida</p>
+ <div class="sum" id="sum"></div>
+ <h2>Preguntas</h2><div class="pills" id="roundsel"></div>
+ <h2>Tiempo por pregunta</h2><div class="pills" id="timesel"></div>
+ <button class="go" id="back" style="background:var(--mute)">◀ Volver</button>
+ <button class="go" id="start">¡Comenzar! 🎮</button>
+</section>
+<section id="game" class="hide">
+ <div class="top"><b id="ctx"></b><b id="prog"></b></div>
+ <div class="bar"><i id="tbar"></i></div>
+ <div class="teams" id="teams"></div>
+ <div class="q" id="qtxt"></div>
+ <div class="opts" id="opts"></div>
+ <div class="fb" id="fb" aria-live="polite"></div>
+ <button class="go hide" id="next">Siguiente ▶</button>
+</section>
+<section id="end" class="hide">
+ <h1>🏆 ¡Resultados!</h1><p class="sub" id="endctx"></p>
+ <div class="record" id="record"></div>
+ <ol class="rank" id="rank"></ol>
+ <h2>🏅 Mejores del curso</h2><ol class="rank" id="top"></ol><div id="badges"></div>
+ <button class="go" id="again">Jugar de nuevo 🔁</button>
+ <button class="go" id="menu" style="background:var(--pri)">Menú ☰</button>
+</section>
+<section id="hall" class="hide">
+ <h1>🏆 Salón de la <span>fama</span></h1><p class="sub">Mayores puntajes guardados automáticamente</p>
+ <h2>Carrera</h2><div class="pills" id="hcar"></div>
+ <h2>Curso</h2><div class="pills" id="hcur"></div>
+ <div class="record" id="champ"></div>
+ <ol class="rank" id="hrank"></ol>
+ <button class="go" id="hback" style="background:var(--pri)">◀ Volver</button>
+ <button class="go" id="hclear" style="background:var(--bad)">🗑 Borrar puntajes</button>
+</section>
+</div>
+<script type="module" src="js/main.js"></script>
+</body></html>
